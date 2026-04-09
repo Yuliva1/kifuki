@@ -34,7 +34,6 @@
     overflow-x: hidden;
   }
 
-  /* Grid background */
   body::before {
     content: '';
     position: fixed;
@@ -50,7 +49,6 @@
   .font-hand { font-family: 'Caveat', cursive; }
   .font-body { font-family: 'Nunito', sans-serif; }
 
-  /* ======= HEADER ======= */
   header {
     position: sticky;
     top: 0;
@@ -187,7 +185,6 @@
     transition: all 0.3s;
   }
 
-  /* ======= HERO ======= */
   .hero {
     position: relative;
     z-index: 1;
@@ -203,15 +200,15 @@
     overflow: hidden;
   }
 
-.float-item {
-  position: absolute;
-  width: 120px;
-  height:120px;
-  object-fit: contain;
-  animation: floatAnim 4s ease-in-out infinite;
-  opacity: 0.85;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
-}
+  .float-item {
+    position: absolute;
+    width: 120px;
+    height:120px;
+    object-fit: contain;
+    animation: floatAnim 4s ease-in-out infinite;
+    opacity: 0.85;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  }
   .float-item:nth-child(1) { top: 12%; left: 7%;  animation-delay: 0s; }
   .float-item:nth-child(2) { top: 20%; right: 8%; animation-delay: 0.7s; }
   .float-item:nth-child(3) { bottom: 25%; left: 5%;animation-delay: 1.4s; }
@@ -291,7 +288,6 @@
   }
   .btn-outline:hover { background: var(--primary-light); transform: translateY(-3px) rotate(1.5deg); }
 
-  /* Sticker preview row */
   .hero-stickers {
     display: flex;
     justify-content: center;
@@ -317,7 +313,6 @@
 
   .hero-sticker img { width: 100%; height: 100%; object-fit: cover; }
 
-  /* Sticker placeholder (emoji fallback) */
   .sticker-placeholder {
     width: 100%; height: 100%;
     display: flex; align-items: center; justify-content: center;
@@ -328,7 +323,6 @@
   .bg-sky { background: var(--sky-light); }
   .bg-sage { background: var(--sage-light); }
 
-  /* ======= SECTION COMMON ======= */
   section { position: relative; z-index: 1; }
 
   .section-inner {
@@ -352,7 +346,6 @@
     margin-bottom: 40px;
   }
 
-  /* ======= CATEGORIES ======= */
   .categories { background: white; }
 
   .cat-grid {
@@ -382,7 +375,6 @@
   .cat-card .cat-emoji { font-size: 2.2rem; margin-bottom: 10px; display: block; }
   .cat-card .cat-name { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.9rem; }
 
-  /* ======= PRODUCTS ======= */
   .products-section { background: var(--cream); }
 
   .products-header {
@@ -497,7 +489,6 @@
   .add-btn:hover { background: #c73068; transform: scale(1.05); }
   .add-btn:active { transform: scale(0.97); }
 
-  /* ======= ABOUT ======= */
   .about-section { background: white; }
 
   .about-card {
@@ -557,7 +548,6 @@
   .tag-pink { background: var(--primary-light); color: var(--primary); }
   .tag-sage { background: var(--sage-light); color: #4a7a44; }
 
-  /* ======= HOW TO ORDER ======= */
   .order-section { background: var(--sky-light); }
 
   .steps-grid {
@@ -606,7 +596,6 @@
     line-height: 1.6;
   }
 
-  /* ======= TESTIMONIALS ======= */
   .reviews-section { background: var(--cream); }
 
   .reviews-grid {
@@ -659,7 +648,6 @@
     color: var(--ink-soft);
   }
 
-  /* ======= NEWSLETTER ======= */
   .newsletter-section {
     background: var(--primary);
     position: relative;
@@ -733,7 +721,6 @@
   }
   .newsletter-form button:hover { background: #1a1020; }
 
-  /* ======= FOOTER ======= */
   footer {
     background: var(--ink);
     color: white;
@@ -813,7 +800,6 @@
 
   .footer-hearts { color: var(--primary-light); }
 
-  /* ======= MOBILE ======= */
   @media (max-width: 768px) {
     nav { display: none; }
     .hamburger { display: flex; }
@@ -832,7 +818,6 @@
     .hero-sticker { width: 75px; height: 75px; }
   }
 
-  /* ======= SCROLL ANIMATIONS ======= */
   .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -847,7 +832,6 @@
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
 
-  /* Toast */
   #toast {
     position: fixed;
     bottom: 32px;
@@ -873,10 +857,8 @@
 
 <body>
 
-<!-- Toast notification -->
 <div id="toast">🛍️ Sepete eklendi!</div>
 
-<!-- Header -->
 <header>
   <div class="nav-inner">
     <a class="logo" href="#">
@@ -902,8 +884,6 @@
   </div>
 </header>
 
-
-<!-- Hero -->
 <section class="hero">
 <div class="hero-floats">
   <img class="float-item" src="sticket1.png" alt="">
@@ -935,7 +915,6 @@
 </div>
 </section>
 
-<!-- Categories -->
 <section class="categories" id="shop">
   <div class="section-inner">
     <h2 class="section-title reveal">kategoriler</h2>
@@ -952,7 +931,6 @@
   </div>
 </section>
 
-<!-- Products -->
 <section class="products-section" id="new">
   <div class="section-inner">
     <div class="products-header">
@@ -967,7 +945,7 @@
       <div class="product-card reveal reveal-delay-1">
         <span class="product-badge new">Yeni</span>
 <div class="product-img">
-  <img src="sticket1.png" alt="Frieren Seti" 
+  <img src="sticket1.png" alt="Frieren Seti"
        style="width:100%; height:100%; object-fit:cover;">
 </div>
         <div class="product-body">
@@ -983,7 +961,6 @@
   </div>
 </section>
 
-<!-- About -->
 <section class="about-section" id="about">
   <div class="section-inner">
     <div class="about-card reveal">
@@ -1003,7 +980,6 @@
   </div>
 </section>
 
-<!-- How to Order -->
 <section class="order-section" id="how">
   <div class="section-inner">
     <h2 class="section-title reveal" style="text-align:center">Nasıl Sipariş Verirsin?</h2>
@@ -1031,7 +1007,6 @@
   </div>
 </section>
 
-<!-- Reviews -->
 <section class="reviews-section">
   <div class="section-inner">
     <h2 class="section-title reveal">Müşteriler Ne Diyor?</h2>
@@ -1078,7 +1053,6 @@
   </div>
 </section>
 
-<!-- Newsletter -->
 <section class="newsletter-section" id="contact">
   <div class="newsletter-inner">
     <h2 class="newsletter-title reveal">Yeni Çıkartmalardan Haberdar Ol 🌸</h2>
@@ -1090,7 +1064,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1143,7 +1116,6 @@
 </footer>
 
 <script>
-  // Cart count
   let cartCount = 0;
   function addCart() {
     cartCount++;
@@ -1153,7 +1125,6 @@
     setTimeout(() => toast.classList.remove('show'), 2200);
   }
 
-  // Newsletter
   function subscribe() {
     const toast = document.getElementById('toast');
     toast.textContent = '✅ Abone oldun! Teşekkürler 🌸';
@@ -1164,7 +1135,6 @@
     }, 2500);
   }
 
-  // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -1176,9 +1146,7 @@
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
 
-  // Mobile menu toggle
   function toggleMenu() {
-    // simple toggle for mobile
     const nav = document.querySelector('nav');
     if (nav.style.display === 'flex') {
       nav.style.display = 'none';
